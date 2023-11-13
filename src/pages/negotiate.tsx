@@ -18,7 +18,7 @@ const Negotiate = () => {
     }
 
     const handleSuccess = () => {
-        navigate('/clients');
+        navigate('/prepare', {state: {data: leadsData}});
     }
     
     return (

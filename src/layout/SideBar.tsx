@@ -6,6 +6,8 @@ const menuItem = [
     { title: 'Cadastro', path: '/register' },
     { title: 'Leads', path: '/leads' },
     { title: 'Clientes', path: '/clients' },
+    { title: 'Carros', path: '/vehicle' },
+    { title: 'Agendamento', path: '/schedule' },
 ]
 
 const ItemSelectStyle = "flex items-center justify-center w-56 h-12 rounded-[50px] bg-black"

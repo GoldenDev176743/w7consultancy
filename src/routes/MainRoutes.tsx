@@ -11,6 +11,11 @@ const Leads = Loadable(lazy(() => import('../pages/leads')));
 const LeadsEdit = Loadable(lazy(() => import('../pages/leadsedit')));
 const Negotiate = Loadable(lazy(() => import('../pages/negotiate')));
 const Clients = Loadable(lazy(() => import('../pages/clients')));
+const Prepare = Loadable(lazy(() => import('../pages/prepare')));
+const Contract = Loadable(lazy(() => import('../pages/contract')));
+const Vehicle = Loadable(lazy(() => import('../pages/vehicle')));
+const Schedule = Loadable(lazy(() => import('../pages/schedule')));
+const Agendado = Loadable(lazy(() => import('../pages/agendado')));
 
 const MainRoutes = {
     path: '/',
@@ -39,6 +44,26 @@ const MainRoutes = {
         {
             path: 'clients',
             element: <Clients />
+        },
+        {
+            path: 'prepare',
+            element: <Prepare />
+        },
+        {
+            path: 'contract',
+            element: <Contract />
+        },
+        {
+            path: 'vehicle',
+            element: <Vehicle />
+        },
+        {
+            path: 'schedule',
+            element: <Schedule />
+        },
+        {
+            path: 'agendado',
+            element: <Agendado />
         }
     ]
 }
