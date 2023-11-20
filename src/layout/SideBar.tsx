@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 // constant
 const menuItem = [
+    { title: 'Home', path: '/'},
     { title: 'Cadastro', path: '/register' },
     { title: 'Leads', path: '/leads' },
     { title: 'Clientes', path: '/clients' },
