@@ -23,7 +23,7 @@ const MainRoutes = {
     children: [
         {
             path: '/',
-            element: <Home />
+            element: <Home/>
         },
         {
             path: 'register',
@@ -64,7 +64,8 @@ const MainRoutes = {
         {
             path: 'agendado',
             element: <Agendado />
-        }
+        },
+       
     ]
 }
 
