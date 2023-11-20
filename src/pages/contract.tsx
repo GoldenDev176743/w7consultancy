@@ -113,7 +113,7 @@ const Contract = () => {
                                 }} className="w-[70px] h-[70px]">
                                     <img className="rounded-full" src="close.png" alt="close" width={70} height={70} />
                                 </button>
-                                <button type="submit" className="w-[70px] h-[70px]">
+                                <button type="submit" className="w-[70px] h-[70px]" onClick={() => {navigate('/agendado');}}>
                                     <img className="rounded-full" src="success.png" alt="success" width={70} height={50} />
                                 </button>
                             </Stack>
