@@ -1,7 +1,8 @@
 import ChartCard from '../components/ChartCard'
 
-const shortCard = [
+const ShortCard = [
     {
+        id: 1,
         width: "310px",
         color: "",
         title: "Faturamento",
@@ -16,6 +17,7 @@ const shortCard = [
         displayagain: "none"
     },
     {
+        id: 2,
         width: "310px",
         color: "",
         title: "Despesas",
@@ -30,6 +32,7 @@ const shortCard = [
         displayagain: "none"
     },
     {
+        id: 3,
         width: "310px",
         color: "#00C460",
         title: "Saldo",
@@ -45,8 +48,9 @@ const shortCard = [
     }
 ]
 
-const longCard = [
+const LongCard = [
     {
+        id: 1,
         width: "639px",
         color: "white",
         title: "QUANTIDADE DE LEADS",
@@ -62,6 +66,7 @@ const longCard = [
 
     },
     {
+        id: 2,
         width: "639px",
         color: "linear-gradient(#ffffff,#D6C8A7)",
         title: "QUANTIDADE DE CLIENTS",
@@ -100,20 +105,21 @@ const Home = () => {
             <div className='w-2/3 h-full flex flex-col justify-between'>
                 {/* These are cards show the total profit chart. */}
                 <div className='flex h-1/3 justify-between'>
-                    {shortCard.map((shortCard) =>
+                    {ShortCard.map((ShortCard) =>
                         <ChartCard
-                            width={shortCard.width}
-                            title={shortCard.title}
-                            number={shortCard.number}
-                            color={shortCard.color}
-                            unit={shortCard.unit}
-                            description={shortCard.desctiption}
-                            graph={shortCard.graph}
-                            height={shortCard.height}
-                            display={shortCard.display}
-                            lettercolor={shortCard.lettercolor}
-                            titlecolor={shortCard.titlecolor}
-                            displayagain={shortCard.displayagain}
+                            key={ShortCard.id}
+                            width={ShortCard.width}
+                            title={ShortCard.title}
+                            number={ShortCard.number}
+                            color={ShortCard.color}
+                            unit={ShortCard.unit}
+                            description={ShortCard.desctiption}
+                            graph={ShortCard.graph}
+                            height={ShortCard.height}
+                            display={ShortCard.display}
+                            lettercolor={ShortCard.lettercolor}
+                            titlecolor={ShortCard.titlecolor}
+                            displayagain={ShortCard.displayagain}
                         />
                     )}
                 </div>
@@ -122,7 +128,7 @@ const Home = () => {
                         <h1 className='border-1 border-solid border-b border-black p-2 text-center text-[30px] font-bold'>FILIAIS</h1>
                         <div className='flex flex-col h-[48vh] justify-between'>
                             <div className='mt-6'>
-                                {buttonName.map((name) => <button className='w-60 mt-3 bg-[#D6C8A7] font-bold rounded-full h-10'>{name}</button>)}
+                                {buttonName.map((name) => <button key={name} className='w-60 mt-3 bg-[#D6C8A7] font-bold rounded-full h-10'>{name}</button>)}
                             </div>
                             <div className='pr-8'>
                                 <div className='text-6xl text-white font-bold h-20 w-20 pt-2 rounded-full bg-[green] text-center float-right'>+</div>
@@ -131,20 +137,21 @@ const Home = () => {
 
                     </div>
                     <div className='flex flex-col justify-between'>
-                        {longCard.map((longCard) =>
+                        {LongCard.map((LongCard) =>
                             <ChartCard
-                                width={longCard.width}
-                                title={longCard.title}
-                                number={longCard.number}
-                                color={longCard.color}
-                                unit={longCard.unit}
-                                description={longCard.desctiption}
-                                graph={longCard.graph}
-                                height={longCard.height}
-                                display={longCard.display}
-                                lettercolor={longCard.lettercolor}
-                                titlecolor={longCard.titlecolor}
-                                displayagain={longCard.displayagain}
+                                key={LongCard.id}
+                                width={LongCard.width}
+                                title={LongCard.title}
+                                number={LongCard.number}
+                                color={LongCard.color}
+                                unit={LongCard.unit}
+                                description={LongCard.desctiption}
+                                graph={LongCard.graph}
+                                height={LongCard.height}
+                                display={LongCard.display}
+                                lettercolor={LongCard.lettercolor}
+                                titlecolor={LongCard.titlecolor}
+                                displayagain={LongCard.displayagain}
 
                             />
                         )}
@@ -157,7 +164,7 @@ const Home = () => {
                  {/* A card that displays used cars that have been sold. */}
                 <div className='w-full bg-[#c7c6c6] p-5 rounded-[18px]'>
                     <h1 className='text-[#56f756] font-bold text-center'>Faturamento Anual</h1>
-                    {salesCars.map((name) => <button className='w-full mt-1 bg-[#b7b1b1] font-bold rounded-full h-10'>{name}</button>)}
+                    {salesCars.map((name) => <button key={name} className='w-full mt-1 bg-[#b7b1b1] font-bold rounded-full h-10'>{name}</button>)}
 
                 </div>
                 <div className='p-2 text-[35px] text-white font-bold bg-green-500 rounded-[18px] text-center'>1.000.000.000,00</div>
