@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 // constant
 const menuItem = [
-    { title: 'Home', path: '/'},
+    { title: 'Início', path: '/'},
     { title: 'Cadastro', path: '/register' },
     { title: 'Leads', path: '/leads' },
     { title: 'Clientes', path: '/clients' },
@@ -15,7 +15,7 @@ const ItemSelectStyle = "flex items-center justify-center w-56 h-12 rounded-[50p
 const ItemNormalStyle = "flex items-center justify-center w-56 h-12"
 
 const SideBar = () => {
-    const [state, setState] = useState<string>("register");
+    const [state, setState] = useState<string>("Home");
     const navigate = useNavigate();
 
     return (
