@@ -3,6 +3,7 @@ import { lazy } from 'react';
 // project import
 import Loadable from '../components/Loadable';
 import MainLayout from '../layout/MainLayout';
+import AuthGuard from '../utils/route-guard/AuthGuard';
 
 // render - page
 const Home = Loadable(lazy(() => import('../pages/home')));
@@ -19,54 +20,65 @@ const Agendado = Loadable(lazy(() => import('../pages/agendado')));
 
 const MainRoutes = {
     path: '/',
-    element: <MainLayout />,
     children: [
         {
             path: '/',
-            element: <Home/>
-        },
-        {
-            path: 'register',
-            element: <Register />
-        },
-        {
-            path: 'leads',
-            element: <Leads />
-        },
-        {
-            path: 'leadsedit',
-            element: <LeadsEdit />
-        },
-        {
-            path: 'negotiate',
-            element: <Negotiate />
-        },
-        {
-            path: 'clients',
-            element: <Clients />
-        },
-        {
-            path: 'prepare',
-            element: <Prepare />
-        },
-        {
-            path: 'contract',
-            element: <Contract />
-        },
-        {
-            path: 'vehicle',
-            element: <Vehicle />
-        },
-        {
-            path: 'schedule',
-            element: <Schedule />
-        },
-        {
-            path: 'agendado',
-            element: <Agendado />
-        },
+            element: (
+                // <AuthGuard>
+                    <MainLayout/>
+                // </AuthGuard>
+            ),
+            children: [
        
-    ]
+                {
+                    path: 'home',
+                    element: <Home />
+                },
+                {
+                    path: 'register',
+                    element: <Register />
+                },
+                {
+                    path: 'leads',
+                    element: <Leads />
+                },
+                {
+                    path: 'leadsedit',
+                    element: <LeadsEdit />
+                },
+                {
+                    path: 'negotiate',
+                    element: <Negotiate />
+                },
+                {
+                    path: 'clients',
+                    element: <Clients />
+                },
+                {
+                    path: 'prepare',
+                    element: <Prepare />
+                },
+                {
+                    path: 'contract',
+                    element: <Contract />
+                },
+                {
+                    path: 'vehicle',
+                    element: <Vehicle />
+                },
+                {
+                    path: 'schedule',
+                    element: <Schedule />
+                },
+                {
+                    path: 'agendado',
+                    element: <Agendado />
+                },
+        
+            ]
+        }
+    ],
+    
 }
 
 export default MainRoutes;

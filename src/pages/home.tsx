@@ -1,3 +1,4 @@
+import { title } from 'process'
 import ChartCard from '../components/ChartCard'
 
 const shortCard = [
@@ -95,6 +96,7 @@ const salesCars = [
 ]
 
 const Home = () => {
+    
     return (
         <div className="flex justify-between px-10 py-10 h-[95vh]">
             <div className='w-2/3 h-full flex flex-col justify-between'>

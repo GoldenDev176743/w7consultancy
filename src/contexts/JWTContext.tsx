@@ -13,6 +13,7 @@ import Loader from '../components/Loader';
 import axios from '../utils/axios';
 import { KeyedObject } from '../types/root';
 import { AuthProps, JWTContextType } from '../types/auth';
+import axiosServices from '../utils/axios';
 
 const chance = new Chance();
 
@@ -83,7 +84,7 @@ export const JWTProvider = ({ children }: { children: React.ReactElement }) => {
   }, []);
 
   const login = async (email: string, password: string) => {
-    const response = await axios.post('/api/account/login', { email, password });
+    const response = await axiosServices.post('/api/account/login', { email, password });
     const { serviceToken, user } = response.data;
     setSession(serviceToken);
     dispatch({

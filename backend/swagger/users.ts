@@ -1,11 +1,11 @@
-export const getLeadsSwagger = {
+export const getUsersSwagger = {
     "hapi-swagger": {
         responses: {
             200: {
-                description: "Got leads successfully.",
+                description: "Got users successfully.",
             },
             404: {
-                description: "Active leads not found.",
+                description: "Active users not found.",
             },
             500: {
                 description: "Server error.",
@@ -13,32 +13,35 @@ export const getLeadsSwagger = {
         },
     },
 };
-export const leadsRegisterSwagger = {
+export const usersRegisterSwagger = {
     "hapi-swagger": {
         responses: {
             201: {
-                description: "Leads created successfully.",
+                description: "Users created successfully.",
             },
             400: {
                 description: "Input Fields Required.",
             },
             409: {
-                description: "Leads already exists.",
+                description: "Users already exists.",
+            },
+            500: {
+                description: "Server error.",
             },
         },
     },
 };
-export const leadsUpdateSwagger = {
+export const usersUpdateSwagger = {
     "hapi-swagger": {
         responses: {
             200: {
-                description: "Lead has been updated.",
+                description: "User has been updated.",
             },
             404: {
-                description: "Leads not found.",
+                description: "Users not found.",
             },
             409: {
-                description: "Already updated a Lead.",
+                description: "Already updated a User.",
             },
             500: {
                 description: "Failed.",
@@ -53,14 +56,14 @@ export const usersLoginSwagger = {
             200: {
                 description: "Welcome"
             },
-            404: {
-                description: "Leads not found.",
+            400: {
+                description: 'Input Fields Required.'
             },
             409: {
-                description: "Already updated a Lead.",
+                description: "Welcome"
             },
             500: {
-                description: "Failed.",
+                description: "Welcome"
             },
         }
     }

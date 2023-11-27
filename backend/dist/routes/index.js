@@ -14,10 +14,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const config_1 = __importDefault(require("../config"));
 const leads_1 = require("./leads");
+const users_1 = require("./users");
 const prefix = `/api/${config_1.default.apiVersion}`;
 const setRoutes = (server) => __awaiter(void 0, void 0, void 0, function* () {
     server.realm.modifiers.route.prefix = `/api/${config_1.default.apiVersion}/leads`;
     server.route(leads_1.leadsRoute);
+    server.realm.modifiers.route.prefix = `/api/${config_1.default.apiVersion}/users`;
+    server.route(users_1.usersRoute);
 });
 exports.default = setRoutes;
 //# sourceMappingURL=index.js.map

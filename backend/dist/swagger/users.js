@@ -1,14 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.usersLoginSwagger = exports.leadsUpdateSwagger = exports.leadsRegisterSwagger = exports.getLeadsSwagger = void 0;
-exports.getLeadsSwagger = {
+exports.usersLoginSwagger = exports.usersUpdateSwagger = exports.usersRegisterSwagger = exports.getUsersSwagger = void 0;
+exports.getUsersSwagger = {
     "hapi-swagger": {
         responses: {
             200: {
-                description: "Got leads successfully.",
+                description: "Got users successfully.",
             },
             404: {
-                description: "Active leads not found.",
+                description: "Active users not found.",
             },
             500: {
                 description: "Server error.",
@@ -16,32 +16,32 @@ exports.getLeadsSwagger = {
         },
     },
 };
-exports.leadsRegisterSwagger = {
+exports.usersRegisterSwagger = {
     "hapi-swagger": {
         responses: {
             201: {
-                description: "Leads created successfully.",
+                description: "Users created successfully.",
             },
             400: {
                 description: "Input Fields Required.",
             },
             409: {
-                description: "Leads already exists.",
+                description: "Users already exists.",
             },
         },
     },
 };
-exports.leadsUpdateSwagger = {
+exports.usersUpdateSwagger = {
     "hapi-swagger": {
         responses: {
             200: {
-                description: "Lead has been updated.",
+                description: "User has been updated.",
             },
             404: {
-                description: "Leads not found.",
+                description: "Users not found.",
             },
             409: {
-                description: "Already updated a Lead.",
+                description: "Already updated a User.",
             },
             500: {
                 description: "Failed.",
@@ -58,4 +58,4 @@ exports.usersLoginSwagger = {
         }
     }
 };
-//# sourceMappingURL=leads.js.map
+//# sourceMappingURL=users.js.map
